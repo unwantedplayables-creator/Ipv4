@@ -1,0 +1,51 @@
+{
+  "brand_name": "NovaNode",
+  "max_vps_cpus": 2,
+  "max_vps_ram_gb": 4,
+  "max_total_vps_cpus": 2,
+  "max_total_vps_ram_gb": 6,
+  "cpu_threshold_percent": 90,
+  "cpu_check_interval_seconds": 60,
+  "web_idle_seconds": 1800,
+  "daily_claim_credits": 200,
+  "daily_claim_cooldown_seconds": 86400,
+  "admin_deploy_plan": {
+    "ram": 2,
+    "cpu": 1,
+    "disk": 20
+  },
+  "vps_plans": {
+    "starter": {
+      "ram": 1,
+      "cpu": 1,
+      "disk": 10,
+      "credits": {
+        "Intel": 42,
+        "AMD": 83
+      }
+    },
+    "basic": {
+      "ram": 2,
+      "cpu": 1,
+      "disk": 20,
+      "credits": {
+        "Intel": 96,
+        "AMD": 164
+      }
+    }
+  },
+  "coin_plans": {
+    "starter": {
+      "ram": 1,
+      "cpu": 1,
+      "disk": 10,
+      "price": 1000
+    },
+    "standard": {
+      "ram": 2,
+      "cpu": 1,
+      "disk": 20,
+      "price": 2000
+    }
+  }
+}

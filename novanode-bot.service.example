@@ -1,0 +1,17 @@
+[Unit]
+Description=NovaNode Discord VPS Bot
+After=network-online.target docker.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=simple
+User=novanode
+Group=docker
+WorkingDirectory=/opt/novanode
+ExecStart=/opt/novanode/venv/bin/python /opt/novanode/sift-v4.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

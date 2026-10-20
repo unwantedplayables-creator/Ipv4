@@ -1,0 +1,12 @@
+sift.env
+.sift.env
+sift.log
+venv/
+__pycache__/
+*.py[cod]
+user_data.json
+vps_data.json
+admin_data.json
+coupons.json
+*.json.bak
+*.json.tmp

@@ -1,0 +1,16 @@
+[Unit]
+Description=NovaNode Cloudflare Tunnel
+After=docker.service network-online.target
+Requires=docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/novanode/cloudflare.env
+ExecStart=/usr/bin/docker run --rm --name novanode-tunnel --add-host=host.docker.internal:host-gateway cloudflare/cloudflared:latest tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
+ExecStop=/usr/bin/docker stop --time 10 novanode-tunnel
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
